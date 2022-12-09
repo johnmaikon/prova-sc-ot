@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Peça para o programa perguntar para o usuário qual o assunto mais difícil da disciplina de 
+    Programação. Baseado nas respostas do usuário, apresente a respectiva mensagem:
+    - Se o usuário informar Variáveis e Operadores (VO), o programa apresentará a mensagem "Primeiro";
+    - Se o usuário informar Estrutura de Decisão (ED), o programa apresentará a mensagem "Segundo";
+    - Se o usuário informar Estruturas de Repetição (RE), o programa apresentará a mensagem "Terceiro".
+    Apresente a mensagem em tela.
+    */
+
+    //Entrada
+    const assunto = prompt(`Variáveis e Operadores (VO), Estrutura de Decisão (ED), Estruturas de Repeticão (ER)`).toUpperCase();
+
+    //Processamento
+    let resultado;
+
+    switch (assunto) {
+        case "VO": resultado = "Primeiro!"
+            break;
+        case "ED": resultado = "Segundo!"
+            break;
+        case "ER": resultado = "Terceiro!"
+            break;
+        default: resultado = "Valor inválido!"
+            break;
+    }
+
+    //Saída
+    document.write(`${resultado}`)
+</script>

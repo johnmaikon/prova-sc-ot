@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<script>
+    // OPERADOR TERNÁRIO OPERADOR TERNÁRIO OPERADOR TERNÁRIO
+    /*
+    Problema: Peça para o usuário informar o custo total da viagem que deseja realizar. 
+    Após, calcule como será a forma de pagamento, considerando a seguinte situação.
+    - Se o preço for até R$ 500,00 (inclusive), a viagem será paga em uma única parcela.
+    - Se o preço for até R$ 1.000,00 (inclusive), a viagem será paga em duas parcelas.
+    - Se o preço for até R$ 1.500 (inclusive), a viagem será paga em quatro parcelas.
+    - Se o preço for acima de R$ 1.500, a viagem será paga em 10 parcelas.
+    Considerando o preço da viagem informado pelo usuário, apresente o valor de cada parcela a ser paga.
+    */
+
+    //Entrada
+    const custo = Number(prompt(`Informe o custo total da viagem:`));
+    let quantParcelas;
+    
+
+    //Processamento
+    (custo <= 500)? quantParcelas = 1
+    :(custo <= 1000)? quantParcelas = 2
+    :(custo <= 1500)? quantParcelas = 4
+    : quantParcelas = 10
+
+    let valorParcela = custo / quantParcelas
+    //Saída
+    document.write(`A quantidade de parcelas será ${quantParcelas}</br>`)
+    document.write(`O valor de cada parcela será de: ${valorParcela}`)
+</script>
